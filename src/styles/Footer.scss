@@ -21,19 +21,17 @@ $footerMenuColor: #acacac;
     font-weight: 600;
     text-transform: uppercase;
     transition: all 0.5s ease-in-out;
+    @media screen and (max-width: 767px) {      
+      .logo-icon {
+        margin-top: 20px;
+      }
+    }
     .menu-itens {
       display: flex;
       flex-direction: row;
       justify-content: center;
       gap: 150px;
       transition: all 0.5s ease-in-out;
-      @media screen and (max-width: 767px) {
-        flex-direction: column;
-        gap: 0px;
-        .logo-icon {
-          margin-top: 20px;
-        }
-      }
       &::after {
         width: 0;
         height: 5px;
@@ -41,6 +39,13 @@ $footerMenuColor: #acacac;
         top: 20px;
         position: absolute;
         transition: 0.5s ease;
+      }
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        gap: 0px;
+        .logo-icon {
+          margin-top: 20px;
+        }
       }
       .menu-item {
         cursor: pointer;

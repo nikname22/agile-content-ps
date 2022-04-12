@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# `Descrição do Projeto`
+
+No projeto foi utilizada a biblioteca do React, para realizar as requisições na API foi utilizado o Axios, o qual é chamado apenas uma vez no arquivo principal do projeto o App.js. Para o CSS foi utilizado o pré-processador SASS de acordo com as especificações do projeto.
+
+A pasta src/ divide o projeto em components, onde o jsx e o javascript são chamados, em styles, onde os arquivos scss de estilização são escritos e a pasta icons, onde os ícones do projeto são chamados.
+
+No arquivo General, criei uma função de monitoramento do tamanho de tela para criar uma condição na tag da sinopse para que ela aparece apenas em telas maiores que 769px, visto que o texto não cabe em uma tela menor.
