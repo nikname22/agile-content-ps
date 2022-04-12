@@ -1,0 +1,130 @@
+$menuColor: #acacac;
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: linear-gradient(to top, black 20%, transparent 60%, black 100%);
+    z-index: 1;
+  }
+
+  .nav-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    .title-container {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      // width: 50%;
+      // position: relative;
+      padding-top: 1vh;
+      padding-left: 4vw;
+      
+      .title {
+        width: 100%;
+        color: white;
+        font-size: 4vw;
+        font-weight: 600;
+      }
+      .sub-title {
+        font-size: 2vw;
+        color: $menuColor;
+        width: 100%;
+      }
+    }
+    .hamburguer-container {
+      margin-top: 40px;
+      margin-right: 50px;
+      align-self: flex-start;
+      @media screen and (max-width: 767px) {
+        margin-top: 1vh;
+        margin-right: 4vw;
+      }
+      .hamburguer {
+        width: 40px;
+        height: 4px;
+        background: $menuColor;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background: $menuColor;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+          transform: translateY(11px);
+          cursor: pointer;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background: $menuColor;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+          transform: translateY(22px);
+          cursor: pointer;
+        }
+      }
+      .active-hamburguer {
+        width: 40px;
+        height: 4px;
+        border-radius: 5px;
+        background: transparent;
+        transform: translateX(-50px);
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;        
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background: $menuColor;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+          transform: rotate(45deg) translate(35px, -35px);
+          cursor: pointer;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 40px;
+          height: 4px;
+          background: $menuColor;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+          transform: rotate(-45deg) translate(35px, 35px);
+          cursor: pointer;
+        }
+      }
+    }
+  } 
+}
